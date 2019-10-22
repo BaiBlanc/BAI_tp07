@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/sigle" >
+        <menu >
+            <item
+                android:id="@+id/menu1_sigle_liste"
+                android:title="@string/list" />
+            <item
+                android:id="@+id/menu1_sigle_ajoute"
+                android:title="@string/ajoute" />
+            <item
+                android:id="@+id/menu1_sigle_supprime"
+                android:title="@string/supprime" />
+        </menu>
+    </item>
+    <item
+        android:title="@string/module" >
+        <menu >
+            <item
+                android:id="@+id/menu1_module_liste"
+                android:title="@string/liste" />
+            <item
+                android:id="@+id/menu1_module_ajoute"
+                android:title="@string/ajoute" />
+            <item
+                android:id="@+id/menu1_module_supprime"
+                android:title="@string/supprime" />
+        </menu>
+    </item>
+</menu>
