@@ -3,6 +3,7 @@ package com.example.bai_tp05;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void sigleListe(){
         Toast.makeText(this,"Je veux la liste des sigles​", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, SigleListeActivity.class);
+        startActivity(intent);
     }
     private void sigleAjoute(){
         Toast.makeText(this,"Je veux la liste des sigles​", Toast.LENGTH_LONG).show();
