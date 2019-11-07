@@ -1,13 +1,13 @@
 package com.example.bai_tp05;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.widget.ListView;
+        import android.os.Bundle;
+        import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.Arrays;
+        import java.util.List;
 
 public class ModuleListeActivity extends AppCompatActivity {
 
@@ -21,8 +21,8 @@ public class ModuleListeActivity extends AppCompatActivity {
 
         AdapteurModule adapter = new AdapteurModule(
                 this,
-                R.layout.sigle,
-                cursus
+                R.layout.module,
+                modules
         );
 
         ListView lv = (ListView) findViewById(R.id.module_liste_tv);
