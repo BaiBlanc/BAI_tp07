@@ -28,4 +28,18 @@
                 android:title="@string/supprime" />
         </menu>
     </item>
+    <item
+        android:title="@string/room" >
+        <menu >
+            <item
+                android:id="@+id/menu1_room_liste"
+                android:title="@string/liste" />
+            <item
+                android:id="@+id/menu1_room_ajoute"
+                android:title="@string/ajoute" />
+            <item
+                android:id="@+id/menu1_room_supprime"
+                android:title="@string/supprime" />
+        </menu>
+    </item>
 </menu>

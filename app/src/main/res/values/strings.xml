@@ -8,7 +8,11 @@
     <string name="list">list</string>
     <string name="liste">liste</string>
     <string name="sigle">Sigle</string>
+    <string name="parcours">Parcours</string>
+    <string name="categorie">Categorie</string>
+    <string name="credit">Credit</string>
     <string name="module">Module</string>
+    <string name="room">Room</string>
 
 
 </resources>

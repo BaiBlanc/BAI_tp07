@@ -50,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu1_module_supprime:
                 moduleSupprime();
                 return true;
+            case R.id.menu1_room_liste:
+                roomListe();
+                return true;
+            case R.id.menu1_room_ajoute:
+                roomAjoute();
+                return true;
+            case R.id.menu1_room_supprime:
+                roomSupprime();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -67,13 +76,28 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"Je veux la liste des sigles​", Toast.LENGTH_LONG).show();
     }
     private void moduleListe(){
-        Toast.makeText(this,"Je veux la liste des sigles​", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Je veux la liste des modules", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, ModuleListeActivity.class);
+        startActivity(intent);
     }
     private void moduleAjoute(){
-        Toast.makeText(this,"Je veux la liste des sigles​", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Je veux la liste des modules", Toast.LENGTH_LONG).show();
     }
     private void moduleSupprime(){
-        Toast.makeText(this,"Je veux la liste des sigles​", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Je veux la liste des modules", Toast.LENGTH_LONG).show();
     }
+    private void roomListe(){
+        Toast.makeText(this,"Je veux la liste des room​", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, RoomModuleListeActivity.class);
+        startActivity(intent);
 
+    }
+    private void roomAjoute(){
+        Toast.makeText(this,"Je veux la liste des room​", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, RoomModuleAjouteActivity.class);
+        startActivity(intent);
+    }
+    private void roomSupprime(){
+        Toast.makeText(this,"Je veux supprimer des room​", Toast.LENGTH_LONG).show();
+    }
 }

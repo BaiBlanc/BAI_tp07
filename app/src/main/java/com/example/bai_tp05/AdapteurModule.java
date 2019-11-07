@@ -40,7 +40,7 @@ public class AdapteurModule extends ArrayAdapter {
         sigle_tv.setText(module.getSigle());
         cat_tv.setText(module.getCategorie());
         parcours_tv.setText(module.getParcours());
-        credit_tv.setText(module.getCredit());
+        credit_tv.setText(Integer.toString(module.getCredit()));
         return v;
     }
 }
