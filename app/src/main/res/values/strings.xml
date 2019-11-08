@@ -13,6 +13,7 @@
     <string name="credit">Credit</string>
     <string name="module">Module</string>
     <string name="room">Room</string>
+    <string name="delete">Delete</string>
 
 
 </resources>

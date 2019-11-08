@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
     }
 
     @Override
@@ -87,13 +89,11 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"Je veux la liste des modules", Toast.LENGTH_LONG).show();
     }
     private void roomListe(){
-        Toast.makeText(this,"Je veux la liste des room​", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, RoomModuleListeActivity.class);
         startActivity(intent);
 
     }
     private void roomAjoute(){
-        Toast.makeText(this,"Je veux la liste des room​", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, RoomModuleAjouteActivity.class);
         startActivity(intent);
     }

@@ -1,6 +1,11 @@
 package com.example.bai_tp05;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +17,19 @@ import java.util.List;
 
 public class RoomModuleListeActivity extends AppCompatActivity {
 
+    private ModuleViewModel mvm;
+    private RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_module_list);
+        setContentView(R.layout.activity_room_module_liste);
 
-        Cursus cursus = new Cursus();
-        ArrayList<Module> modules = cursus.getModules();
+        mvm = new ViewModelProvider(this).get(ModuleViewModel.class);
+
+
+        // CursusEntity cursus = new CursusEntity();
+        // ArrayList<ModuleEntity> modules = cursus.getModules();
         Intent intent = getIntent();
         if(intent.getExtras() != null){
 
@@ -28,18 +39,40 @@ public class RoomModuleListeActivity extends AppCompatActivity {
             String categorie = bundle.getString("categorie");
             String credit = bundle.getString("credit");
 
-            Module module = new Module(sigle, parcours, categorie, Integer.parseInt(credit));
-            modules.add(module);
+            ModuleEntity module = new ModuleEntity(sigle, parcours, categorie, Integer.parseInt(credit));
+            // modules.add(module);
+            mvm.insert(module);
         }
 
 
-        AdapteurModule adapter = new AdapteurModule(
+        /*AdapteurModule adapter = new AdapteurModule(
                 this,
                 R.layout.module,
                 modules
         );
+        */
 
-        ListView lv = (ListView) findViewById(R.id.module_liste_tv);
-        lv.setAdapter(adapter);
+
+        // ListView lv = (ListView) findViewById(R.id.module_liste_tv);
+        // lv.setAdapter(adapter);
+
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
+        final AdapteurRoomModule adapter = new AdapteurRoomModule(this);
+
+
+        recyclerView.setAdapter(adapter);
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+        mvm.getAllModules().observe(this, new Observer<List<ModuleEntity>>() {
+            @Override
+            public void onChanged(@Nullable final List<ModuleEntity> modules) {
+                // Update the cached copy of the words in the adapter.
+                adapter.setModules(modules);
+            }
+        });
     }
 }

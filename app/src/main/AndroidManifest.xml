@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RoomModuleAjouteActivity"></activity>
+        <activity android:name=".RoomModuleDeleteActivity"></activity>
+        <activity android:name=".RoomModuleAjouteActivity" />
         <activity android:name=".RoomModuleListeActivity" />
         <activity android:name=".ModuleListeActivity" />
         <activity android:name=".SigleListeActivity" />
