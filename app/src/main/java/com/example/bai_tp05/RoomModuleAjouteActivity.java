@@ -36,6 +36,7 @@ public class RoomModuleAjouteActivity extends AppCompatActivity implements View.
         intent.putExtra("parcours",parcours);
         intent.putExtra("categorie",categorie);
         intent.putExtra("credit",credit);
+        intent.putExtra("activity","Add");
         startActivity(intent);
     }
 }

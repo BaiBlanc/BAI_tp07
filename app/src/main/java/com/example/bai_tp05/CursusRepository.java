@@ -59,6 +59,7 @@ public class CursusRepository {
 
         protected Void doInBackground(final String... params) {
             mAsyncTaskDao.delete(params[0]);
+            
             return null;
         }
     }

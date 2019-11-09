@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".RoomModuleDeleteActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/delete_rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/delete_recycle_item"/>
 
     <Button
         android:id="@+id/delete_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/delete_rv" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+       ></Button>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/delete_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/delete_recycle_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

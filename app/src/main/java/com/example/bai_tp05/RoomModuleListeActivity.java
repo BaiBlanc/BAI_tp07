@@ -33,15 +33,36 @@ public class RoomModuleListeActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if(intent.getExtras() != null){
 
-            Bundle bundle = getIntent().getExtras();
-            String sigle = bundle.getString("sigle");
-            String parcours = bundle.getString("parcours");
-            String categorie = bundle.getString("categorie");
-            String credit = bundle.getString("credit");
 
-            ModuleEntity module = new ModuleEntity(sigle, parcours, categorie, Integer.parseInt(credit));
-            // modules.add(module);
-            mvm.insert(module);
+            Bundle bundle = getIntent().getExtras();
+            String activity = bundle.getString("activity");
+
+            String sigle;
+            String parcours;
+            String categorie;
+            String credit;
+            String[] sigles_to_delete;
+            if(activity.equals("Add")){
+
+                sigle = bundle.getString("sigle");
+                 parcours = bundle.getString("parcours");
+                 categorie = bundle.getString("categorie");
+                 credit = bundle.getString("credit");
+                ModuleEntity module = new ModuleEntity(sigle, parcours, categorie, Integer.parseInt(credit));
+                // modules.add(module);
+                mvm.insert(module);
+            }else if(activity.equals("delete")){
+
+                 sigles_to_delete = bundle.getStringArray("sigle");
+                 for(String s : sigles_to_delete){
+                     mvm.delete(s);
+                 }
+
+            }
+
+
+
+
         }
 
 

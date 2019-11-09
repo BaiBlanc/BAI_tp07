@@ -16,7 +16,7 @@ public interface ModuleDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert (ModuleEntity module);
 
-    @Query("Delete from modules where sigle=:sigle")
+    @Query("DELETE FROM modules WHERE sigle=:sigle")
     void delete(String sigle);
 
     @Update
