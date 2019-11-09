@@ -54,7 +54,7 @@ public class AdapteurRoomModule extends RecyclerView.Adapter<AdapteurRoomModule.
 
 
     public ModuleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.module, parent, false);
+        View itemView = mInflater.inflate(R.layout.module_recycle_item, parent, false);
         return new ModuleViewHolder(itemView);
     }
 

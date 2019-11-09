@@ -99,5 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void roomSupprime(){
         Toast.makeText(this,"Je veux supprimer des room​", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, RoomModuleDeleteActivity.class);
+        startActivity(intent);
     }
 }
